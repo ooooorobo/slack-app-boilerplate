@@ -1,0 +1,12 @@
+node_modules/aws-sdk/*
+.git/*
+.prettierrc
+.package-lock.json
+*.log
+
+.serverless/
+.esbuild/
+
+.env
+
+.idea

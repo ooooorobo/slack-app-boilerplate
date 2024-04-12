@@ -1,0 +1,25 @@
+{
+  "name": "slack-app-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev:serverless": "serverless offline start --reloadHandler",
+    "dev:ngrok": "ngrok http 3000",
+    "deploy": "serverless deploy"
+  },
+  "keywords": [],
+  "author": "ooooorobo",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^3.17.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2",
+    "prettier": "^3.2.5",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-esbuild": "^1.52.1",
+    "serverless-ignore": "^0.2.1",
+    "serverless-offline": "^13.3.3"
+  }
+}

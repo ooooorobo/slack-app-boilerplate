@@ -1,0 +1,20 @@
+service: slack-app # your service name here
+frameworkVersion: '3'
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: development
+  region: ap-northeast-2 # your AWS region here
+functions:
+  app:
+    handler: src/functions/app.handler
+    events:
+      - http:
+          path: test
+          method: get
+useDotenv: true
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+  - serverless-ignore
+  - serverless-esbuild
