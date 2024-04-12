@@ -6,12 +6,18 @@ provider:
   stage: development
   region: ap-northeast-2 # your AWS region here
 functions:
-  app:
+  slack:
     handler: src/functions/app.handler
     events:
       - http:
-          path: test
-          method: get
+          path: slack/events
+          method: post
+      - http:
+          path: slack/command
+          method: post
+      - http:
+          path: slack/view
+          method: post
 useDotenv: true
 plugins:
   - serverless-offline
